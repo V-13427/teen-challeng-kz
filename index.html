@@ -6,8 +6,24 @@
   <title>Teen Challenge Kazakhstan — Реабилитационный центр</title>
   <style>
     body { margin:0; font-family: Arial, sans-serif; background:#f5f5f5; color:#333; line-height:1.6; }
-    header { background:#2c3e50; color:white; padding:30px 20px; display:flex; align-items:center; justifi-content:flex-start; gap:20px; }
-    header img { max-width:180px; }
+    header {
+  position: relative;
+  background:#2c3e50;
+  color:white;
+  padding:30px 20px;
+  min-height:140px;
+}
+    header img {
+  position: absolute;
+  left:20px;
+  top:50%;
+  transform:translateY(-50%);
+  max-width:180px;
+}
+
+.header-text {
+  text-align:center;
+}
     section { padding:40px 20px; max-width:900px; margin:auto; }
     .card { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-bottom:20px; }
     h2 { margin-top:0; color:#2c3e50; }
@@ -27,12 +43,12 @@
 
 <header>
   <img src="logo.png" alt="Teen Challenge Kazakhstan">
-  
-  <div>
-  <h1>Teen Challenge Kazakhstan</h1>
-  <p>Реабилитационный центр помощи</p>
-  <p>Адрес: Айналмалы 5 Б, Теректы, Алматы</p>
-   <div> 
+
+  <div class="header-text">
+    <h1>Teen Challenge Kazakhstan</h1>
+    <p>Реабилитационный центр помощи людям всех возрастов</p>
+    <p>Адрес: Айналмалы 5 Б, Теректы, Алматы</p>
+  </div>
 </header>
 
 <section>
@@ -77,11 +93,14 @@
   </div>
 
   <div class="card">
-    <h2>Мы в социальных сетях</h2>
-    <p>TikTok — будет добавлен</p>
-    <p>Instagram — будет добавлен</p>
-    <p><em>Ссылки появятся после запуска официальных страниц.</em></p>
-  </div>
+  <h2>Мы в социальных сетях</h2>
+  <p>
+    Instagram:
+    <a href="https://instagram.com/USERNAME" target="_blank">
+      tckalkaman
+    </a>
+  </p>
+</div>
 
   <div class="card">
     <h2>Наш центр</h2>
@@ -99,6 +118,9 @@
     <h2>Связаться с нами</h2>
     <p>
       <strong>Телефон / WhatsApp:</strong><br>
+    
+      <a href="tel:+77001234567">+7 707 279 78 73</a> |
+      <a href="https://wa.me/77072797873">WhatsApp</a>
       <a href="tel:+77474603560">+7 747 460 35 60</a> |
       <a href="https://wa.me/77474603560">WhatsApp</a><br>
       <a href="tel:+77754517722">+7 775 451 77 22</a> |
