@@ -36,7 +36,34 @@
     footer { text-align:center; padding:20px; font-size:14px; color:#777; background:#eee; }
     .gallery { display:flex; flex-wrap:wrap; gap:10px; }
     .gallery img { width:48%; border-radius:10px; object-fit:cover; }
-    @media (max-width:600px) { .gallery img { width:100%; } }
+  @media (max-width: 768px) {
+
+  header {
+    padding: 20px 10px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  header img {
+    position: static;
+    transform: none;
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 140px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+}
   </style>
 </head>
 <body>
