@@ -6,94 +6,90 @@
   <title>Teen Challenge Kazakhstan — Реабилитационный центр</title>
   <style>
     body { margin:0; font-family: Arial, sans-serif; background:#f5f5f5; color:#333; line-height:1.6; }
-    
     header {
-      background:#2c3e50;
-      color:white;
-      padding:30px 20px;
-      text-align:center;
-    }
+  position: relative;
+  background:#2c3e50;
+  color:white;
+  padding:30px 20px;
+  min-height:140px;
+}
     header img {
-      max-width:180px;
-      display:block;
-      margin:0 auto 10px auto;
-    }
-    .header-text { text-align:center; }
-    
+  position: absolute;
+  left:20px;
+  top:50%;
+  transform:translateY(-50%);
+  max-width:180px;
+}
+
+.header-text {
+  text-align:center;
+}
     section { padding:40px 20px; max-width:900px; margin:auto; }
     .card { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-bottom:20px; }
     h2 { margin-top:0; color:#2c3e50; }
     ul { padding-left:20px; }
+    {flex: 1; text-align: centr;}
     a { color:#2c3e50; text-decoration:none; font-weight:bold; }
     form input, form textarea { width:100%; padding:12px; margin-bottom:12px; border-radius:8px; border:1px solid #ccc; }
     button { background:#2c3e50; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; }
     button:hover { background:#34495e; }
-    
     footer { text-align:center; padding:20px; font-size:14px; color:#777; background:#eee; }
-    
-    .gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:10px; }
-    .gallery img { width:100%; border-radius:10px; object-fit:cover; }
+    .gallery { display:flex; flex-wrap:wrap; gap:10px; }
+    .gallery img { width:48%; border-radius:10px; object-fit:cover; }
+  @media (max-width: 768px) {
 
-    /* Соцсети */
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 15px;
-      flex-wrap: wrap;
-    }
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 8px; 
-      font-weight: bold;
-      font-size: 14px;
-      text-decoration: none;
-      color: #2c3e50;
-    }
-    .social-icon {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-    }
+  header {
+    padding: 20px 10px;
+    min-height: auto;
+    text-align: center;
+  }
 
-    /* WhatsApp кнопки */
-    .whatsapp-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 15px;
-    }
-    .whatsapp-button {
-      background: #25D366;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 30px;
-      text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .whatsapp-button:hover { background: #1ebe5d; }
+  header img {
+    position: static;
+    transform: none;
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 140px;
+  }
 
-    /* Адаптив */
-    @media (max-width: 768px) {
-      header { padding: 20px 10px; }
-      header img { max-width:140px; margin-bottom:10px; }
-      section { padding: 20px 10px; }
-      .gallery img { width:100%; }
-      .whatsapp-button { width: 90%; margin:0 auto; }
-    }
+  .header-text {
+    text-align: center;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+}
   </style>
 </head>
 <body>
 
 <header>
   <img src="logo.png" alt="Teen Challenge Kazakhstan">
+
   <div class="header-text">
     <h1>Teen Challenge Kazakhstan</h1>
     <p>Реабилитационный центр помощи людям всех возрастов</p>
     <p>Адрес: Айналмалы 5 Б, Теректы, Алматы</p>
   </div>
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+
+.gallery img { width: 100%; border-radius: 10px; }
+   .socials { display: flex; justify-content: center;  gap: 15px;  margin-top: 15px;  flex-wrap: wrap; }
+
+.social-icon {  width: 32px;  height: 32px;  object-fit: contain; }
+
+  .whatsapp-button {  display: inline-block;  background: #25D366;  color: white;  padding: 14px 22px;  border-radius: 30px;  text-decoration: none;  font-weight: bold;
+ margin-top: 20px; }
+
+.whatsapp-button:hover {  background: #1ebe5d; }
+  @media (max-width: 600px) {  h1 {    font-size: 24px;   }   section {     padding: 20px 10px;  }
+
+  .whatsapp-button {     width: 90%;     text-align: center;  } }
 </header>
 
 <section>
@@ -137,19 +133,21 @@
     <p>Если у вас есть желание помочь — свяжитесь с нами по телефону или через WhatsApp.</p>
   </div>
 
-  <div class="card">
-    <h2>Мы в социальных сетях</h2>
-    <div class="socials">
-      <a href="https://www.instagram.com/tckalkaman/" target="_blank" class="social-link">
-        <img src="instagram.png" class="social-icon">
-        Instagram
-      </a>
-      <a href="https://www.tiktok.com/@teen.challenge.kz" target="_blank" class="social-link">
-        <img src="tiktok.png" class="social-icon">
-        TikTok
-      </a>
-    </div>
+<div class="card">
+  <h2>Мы в социальных сетях</h2>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/tckalkaman/" target="_blank">
+      <img src="instagram.png" class="social-icon">
+      Instagram
+    </a>
+
+    <a href="https://www.tiktok.com/@teen.challenge.kz" target="_blank">
+      <img src="tiktok.png" class="social-icon">
+      TikTok
+    </a>
   </div>
+</div>
 
   <div class="card">
     <h2>Наш центр</h2>
@@ -170,11 +168,17 @@
 
   <div class="card">
     <h2>Связаться с нами</h2>
-    <div class="whatsapp-buttons">
-      <a class="whatsapp-button" href="https://wa.me/77072797873">WhatsApp +7 707 279 78 73</a>
-      <a class="whatsapp-button" href="https://wa.me/77474603560">WhatsApp +7 747 460 35 60</a>
-      <a class="whatsapp-button" href="https://wa.me/77754517722">WhatsApp +7 775 451 77 22</a>
-    </div>
+    <p>
+      <strong>Телефон / WhatsApp:</strong><br>
+    
+      <a href="tel:+77001234567">+7 707 279 78 73</a> |
+      <a href="https://wa.me/77072797873">WhatsApp</a>
+      <a href="tel:+77474603560">+7 747 460 35 60</a> |
+      <a href="https://wa.me/77474603560">WhatsApp</a><br>
+      <a href="tel:+77754517722">+7 775 451 77 22</a> |
+      <a href="https://wa.me/77754517722">WhatsApp</a>
+    </p>
+
     <form>
       <input type="text" placeholder="Ваше имя" required>
       <input type="email" placeholder="Email" required>
@@ -194,7 +198,10 @@
     <a href="https://wa.me/77754517722">WhatsApp</a>
   </p>
   <p>© 2026 Teen Challenge Kazakhstan. Все права защищены.</p>
-  <p><a href="privacy.html">Политика конфиденциальности</a></p>
+  
+  <p>
+  <a href="privacy.html">Политика конфиденциальности</a>
+</p>
 </footer>
 
 </body>
