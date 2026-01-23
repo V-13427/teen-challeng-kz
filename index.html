@@ -76,16 +76,20 @@
     <p>Реабилитационный центр помощи людям всех возрастов</p>
     <p>Адрес: Айналмалы 5 Б, Теректы, Алматы</p>
   </div>
-  .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-}
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
 
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-}
+.gallery img { width: 100%; border-radius: 10px; }
+   .socials { display: flex; justify-content: center;  gap: 15px;  margin-top: 15px;  flex-wrap: wrap; }
+
+.social-icon {  width: 32px;  height: 32px;  object-fit: contain; }
+
+  .whatsapp-button {  display: inline-block;  background: #25D366;  color: white;  padding: 14px 22px;  border-radius: 30px;  text-decoration: none;  font-weight: bold;
+ margin-top: 20px; }
+
+.whatsapp-button:hover {  background: #1ebe5d; }
+  @media (max-width: 600px) {  h1 {    font-size: 24px;   }   section {     padding: 20px 10px;  }
+
+  .whatsapp-button {     width: 90%;     text-align: center;  } }
 </header>
 
 <section>
